@@ -1,2 +1,2 @@
 # infomanage
-SpringBoot项目
+Springboot infomanage

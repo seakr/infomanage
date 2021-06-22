@@ -1,0 +1,27 @@
+
+# DataSource Config
+spring:
+  http:
+   multipart:
+    max-file-size: 200MB
+    max-request-size: 200MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/infomanage?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: wen1125..
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: 127.0.0.1:6379
+infomanage:
+  jwt:
+    #密钥 md5(1001500)
+    secret: 256a483d12316812ce3401cacc9afff3
+    #有效时长 sec
+    expire: 604800
+    header: Authorization
